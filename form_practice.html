@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- form 태그 : -->
+    <form action="./result.html" method="get">
+        <!-- fieldset : 묶음으로 만듬-->
+        <fieldset>
+            <!-- legend : 묶음 위에 이름-->
+            <legend>A/S 제출 양식</legend>
+            
+            <!-- input 요소 : 입력 -->
+            <!-- type , name , placeholder , autocomplete , required... -->
+            <!-- label 태그 : 라벨 -->
+            <div>
+                <label for="username">아이디: </label>
+                <input type="text" name="username" placeholder="ID" autocomplete="on" required>
+            </div>
+            <div>
+                <label for="password">비밀번호: </label>
+                <input type="password" name="password" placeholder="PWD" autocomplete="on" required>
+            </div>
+                
+            <!-- min , max , step -->
+            <div>
+                <label for="age">나이:</label>
+                <input type="number" name="age" min="0" max="100" step="10" autocomplete="off">
+            </div>
+            
+            <label for="summary">내용:</label>
+            <!-- textarea 요소 : 여러줄의 텍스트 입력 , rows : 세로길이 , cols : 가로길이-->
+            <div>    
+                <textarea name="summary" rows="10" cols="20" placeholder="내용 입력"></textarea>
+            </div>
+            
+            <!-- select 요소 : 셀렉박스-->
+            <div>
+                <select name="type">
+                    <option value="T_AS_1">환불</option>
+                    <option value="T_AS_2">고장 신고</option>
+                    <option value="T_AS_3">기타</option>
+                </select>
+            </div>
+            
+            <!-- checkbox : 복수 선택 가능 -->
+            <div>
+                <input type="checkbox" name="type_2_1" value="1day">
+                <label for="type_2_1">1일 이내</label>
+                <input type="checkbox" name="type_2_2" value="1day">
+                <label for="type_2_2">1주 이내</label>
+                <input type="checkbox" name="type_2_3" value="1day">
+                <label for="type_2_3">1달 이내</label>
+            </div>
+            
+            <!-- radio : 복수 선택 x (name이 같아야함)-->
+            <div>
+                <input type="radio" name="type_3" value="emergency" checked>
+                <label for="type_3">긴급</label>
+                <input type="radio" name="type_3" value="emergency" checked>
+                <label for="type_3">일반</label>
+            </div>
+            
+            <!-- button 요소 : 버튼박스-->
+            <div>
+                <button type="submit">제 출</button>
+            </div>
+        </fieldset>
+    </form>
+</body>
+</html>
